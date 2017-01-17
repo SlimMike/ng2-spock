@@ -1,3 +1,5 @@
-<p>
-  selector works!
-</p>
+<ul>
+    <li *ngFor="let sign of SIGNS">
+        <a (click)="selectedSign(sign)"><span>{{sign}}</span></a>
+    </li>
+</ul>
