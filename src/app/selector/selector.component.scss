@@ -1,5 +1,8 @@
 $tileHeight: 104;
 $tileWidth: 120;
+$margin: 5;
+$secondRowVOffset: 52 + $margin*1/2;
+$thirdRowVOffset: 156 + $margin*3/2;
 
 ul {
   position: relative;
@@ -19,27 +22,27 @@ ul {
 
     &:nth-child(1) {
       left: 0;
-      top: 180px;
+      top: $thirdRowVOffset+px;
     }
 
     &:nth-child(2) {
       left: 0;
-      top: 76px;
+      top: $secondRowVOffset+px;
     }
 
     &:nth-child(3) {
-      left: 90px;
-      top: 24px;
+      left: 90+$margin+px;
+      top: 0;
     }
 
     &:nth-child(4) {
-      left: 180px;
-      top: 76px;
+      left: 180+$margin*2+px;
+      top: $secondRowVOffset+px;
     }
 
     &:nth-child(5) {
-      left: 180px;
-      top: 180px;
+      left: 180+$margin*2+px;
+      top: $thirdRowVOffset+px;
     }
   }
 }
