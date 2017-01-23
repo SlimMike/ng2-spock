@@ -1,6 +1,10 @@
 <ul>
-    <li *ngFor="let sign of SIGNS">
+    <li class="selectable" *ngFor="let sign of SIGNS">
         <a (click)="selectedSign(sign)"><span>{{sign}}</span></a>
+    </li>
+
+    <li class="selector">
+
     </li>
 </ul>
 

@@ -13,34 +13,40 @@ ul {
   li {
     width: $tileWidth+px;
     height: $tileHeight+px;
-    background: url('/assets/black_and_white_wolf_by_espador-d602yga.png');
-    background-repeat: no-repeat;
+    background: url('/assets/black_and_white_wolf_by_espador-d602yga.png') no-repeat center;
     background-size: cover;
-    background-position: center;
     clip-path: url(#hex-flat);
     position: absolute;
+    top: 109px;
+    left: 95px;
 
-    &:nth-child(1) {
+    &.selector {
+      background: url('/assets/Abstraction wolves background eyes wolf abstract wallpaper  1920x1080 ....jpg') no-repeat center;
+      background-size: cover;
+
+    }
+
+    &.selectable:nth-child(1) {
       left: 0;
       top: $thirdRowVOffset+px;
     }
 
-    &:nth-child(2) {
+    &.selectable:nth-child(2) {
       left: 0;
       top: $secondRowVOffset+px;
     }
 
-    &:nth-child(3) {
+    &.selectable:nth-child(3) {
       left: 90+$margin+px;
       top: 0;
     }
 
-    &:nth-child(4) {
+    &.selectable:nth-child(4) {
       left: 180+$margin*2+px;
       top: $secondRowVOffset+px;
     }
 
-    &:nth-child(5) {
+    &.selectable:nth-child(5) {
       left: 180+$margin*2+px;
       top: $thirdRowVOffset+px;
     }
