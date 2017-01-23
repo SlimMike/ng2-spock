@@ -23,6 +23,15 @@ ul {
     left: $tileWidth*3/4+$margin+px;
     transition: ease-out 0.3s;
 
+    &.selectable a {
+      color: #ffffff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.7);
+    }
+
     &.selector {
       // @todo import
       background: url('/assets/Abstraction wolves background eyes wolf abstract wallpaper  1920x1080 ....jpg') no-repeat center;
