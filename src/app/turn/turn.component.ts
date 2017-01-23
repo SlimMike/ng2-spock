@@ -13,7 +13,7 @@ export class TurnComponent implements OnInit {
   constructor() {
   }
 
-  onNotify($event) {
+  onPlayerSelectedSign($event) {
     console.log($event);
     this.playerSign = $event;
   }
