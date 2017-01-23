@@ -7,8 +7,8 @@ $thirdRowVOffset: 156 + $margin*3/2;
 ul {
   position: relative;
   background: black;
-  width: 500px;
-  height: 500px;
+  width: 270px;
+  height: $tileHeight*3+$margin*2px;
 
   li {
     width: $tileWidth+px;
