@@ -1,13 +1,45 @@
-$tileHeight: 120;
+$tileHeight: 104;
+$tileWidth: 120;
 
 ul {
+  position: relative;
+  background: black;
+  width: 500px;
+  height: 500px;
+
   li {
-    width: $tileHeight+px;
+    width: $tileWidth+px;
     height: $tileHeight+px;
     background: url('/assets/black_and_white_wolf_by_espador-d602yga.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    clip-path: url(#hex);
+    clip-path: url(#hex-flat);
+    position: absolute;
+
+    &:nth-child(1) {
+      left: 0;
+      top: 180px;
+    }
+
+    &:nth-child(2) {
+      left: 0;
+      top: 76px;
+    }
+
+    &:nth-child(3) {
+      left: 90px;
+      top: 24px;
+    }
+
+    &:nth-child(4) {
+      left: 180px;
+      top: 76px;
+    }
+
+    &:nth-child(5) {
+      left: 180px;
+      top: 180px;
+    }
   }
 }
