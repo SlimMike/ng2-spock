@@ -1,9 +1,9 @@
-<ul>
-    <li [ngClass]="{selectable: selectedMode}" *ngFor="let sign of SIGNS">
+<ul [ngClass]="{select: selectedMode}">
+    <li class="selectable" *ngFor="let sign of SIGNS">
         <a (click)="selectedSign(sign)"><span>{{sign}}</span></a>
     </li>
 
-    <li class="selector" (mouseover)="setSelectMode(true)" (mouseleave)="setSelectMode(false)">
+    <li class="selector" (click)="setSelectMode(!selectedMode)">
     </li>
 </ul>
 

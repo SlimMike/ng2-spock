@@ -25,30 +25,34 @@ ul {
       background: url('/assets/Abstraction wolves background eyes wolf abstract wallpaper  1920x1080 ....jpg') no-repeat center;
       background-size: cover;
     }
+  }
 
-    &.selectable:nth-child(1) {
-      left: 0;
-      top: $thirdRowVOffset+px;
-    }
+  &.select {
+    li.selectable {
+      &:nth-child(1) {
+        left: 0;
+        top: $thirdRowVOffset+px;
+      }
 
-    &.selectable:nth-child(2) {
-      left: 0;
-      top: $secondRowVOffset+px;
-    }
+      &:nth-child(2) {
+        left: 0;
+        top: $secondRowVOffset+px;
+      }
 
-    &.selectable:nth-child(3) {
-      left: $tileWidth*3/4+$margin+px;
-      top: 0;
-    }
+      &:nth-child(3) {
+        left: $tileWidth*3/4+$margin+px;
+        top: 0;
+      }
 
-    &.selectable:nth-child(4) {
-      left: $tileWidth*1.5+$margin*2+px;
-      top: $secondRowVOffset+px;
-    }
+      &:nth-child(4) {
+        left: $tileWidth*1.5+$margin*2+px;
+        top: $secondRowVOffset+px;
+      }
 
-    &.selectable:nth-child(5) {
-      left: $tileWidth*1.5+$margin*2+px;
-      top: $thirdRowVOffset+px;
+      &:nth-child(5) {
+        left: $tileWidth*1.5+$margin*2+px;
+        top: $thirdRowVOffset+px;
+      }
     }
   }
 }
