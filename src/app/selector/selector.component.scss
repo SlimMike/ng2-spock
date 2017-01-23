@@ -18,7 +18,7 @@ ul {
     clip-path: url(#hex-flat);
     position: absolute;
     top: $tileHeight+$margin+px;
-    left: 95px;
+    left: $tileWidth*3/4+$margin+px;
     transition: ease-out 0.3s;
 
     &.selector {
@@ -37,17 +37,17 @@ ul {
     }
 
     &.selectable:nth-child(3) {
-      left: 90+$margin+px;
+      left: $tileWidth*3/4+$margin+px;
       top: 0;
     }
 
     &.selectable:nth-child(4) {
-      left: 180+$margin*2+px;
+      left: $tileWidth*1.5+$margin*2+px;
       top: $secondRowVOffset+px;
     }
 
     &.selectable:nth-child(5) {
-      left: 180+$margin*2+px;
+      left: $tileWidth*1.5+$margin*2+px;
       top: $thirdRowVOffset+px;
     }
   }
