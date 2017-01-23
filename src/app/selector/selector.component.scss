@@ -1,0 +1,13 @@
+$tileHeight: 120;
+
+ul {
+  li {
+    width: $tileHeight+px;
+    height: $tileHeight+px;
+    background: url('/assets/black_and_white_wolf_by_espador-d602yga.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    clip-path: url(#hex);
+  }
+}
