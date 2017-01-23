@@ -1,4 +1,4 @@
-import { Sign } from "./sign";
+import { Sign } from './sign';
 
 export class Paper extends Sign {
 }

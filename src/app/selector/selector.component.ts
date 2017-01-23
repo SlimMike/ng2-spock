@@ -10,7 +10,7 @@ export class SelectorComponent implements OnInit {
   @Output() selectedSign: EventEmitter<Sign> = new EventEmitter<Sign>();
 
   public SIGNS = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock'];
-  public selectedMode:boolean = false;
+  public selectedMode: boolean = false;
 
   constructor() {
   }
@@ -18,7 +18,7 @@ export class SelectorComponent implements OnInit {
   ngOnInit() {
   }
 
-  selectSign(name) {
+  selectSign(name: Sign) {
     console.log(name);
     this.selectedSign.emit(name);
   }
