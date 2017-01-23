@@ -15,6 +15,7 @@ export class TurnComponent implements OnInit {
 
   onNotify($event) {
     console.log($event);
+    this.playerSign = $event;
   }
 
   ngOnInit() {
