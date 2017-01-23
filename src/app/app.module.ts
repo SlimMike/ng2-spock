@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SelectorComponent } from './selector/selector.component';
+import { TurnComponent } from './turn/turn.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SelectorComponent
+    SelectorComponent,
+    TurnComponent
   ],
   imports: [
     BrowserModule,
