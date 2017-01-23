@@ -13,6 +13,10 @@ export class TurnComponent implements OnInit {
   constructor() {
   }
 
+  onNotify($event) {
+    console.log($event);
+  }
+
   ngOnInit() {
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-selector',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['selector.component.scss']
 })
 export class SelectorComponent implements OnInit {
+  @Output() notify: EventEmitter<string> = new EventEmitter<string>();
 
   public SIGNS = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock'];
   public selectedMode = false;
@@ -18,6 +19,7 @@ export class SelectorComponent implements OnInit {
 
   selectedSign(name) {
     console.log(name);
+    this.notify.emit(name);
   }
 
   setSelectMode(mode) {
