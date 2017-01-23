@@ -17,13 +17,13 @@ ul {
     background-size: cover;
     clip-path: url(#hex-flat);
     position: absolute;
-    top: 109px;
+    top: $tileHeight+$margin+px;
     left: 95px;
+    transition: ease-out 0.3s;
 
     &.selector {
       background: url('/assets/Abstraction wolves background eyes wolf abstract wallpaper  1920x1080 ....jpg') no-repeat center;
       background-size: cover;
-
     }
 
     &.selectable:nth-child(1) {

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SelectorComponent implements OnInit {
 
   public SIGNS = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock'];
+  public selectedMode = false;
 
   constructor() {
   }
@@ -19,4 +20,7 @@ export class SelectorComponent implements OnInit {
     console.log(name);
   }
 
+  setSelectMode(mode) {
+    this.selectedMode = mode;
+  }
 }
