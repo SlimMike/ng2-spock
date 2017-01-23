@@ -13,8 +13,10 @@ ul {
   li {
     width: $tileWidth+px;
     height: $tileHeight+px;
+    // @todo import
     background: url('/assets/black_and_white_wolf_by_espador-d602yga.png') no-repeat center;
     background-size: cover;
+    // @todo resolve file?
     clip-path: url(#hex-flat);
     position: absolute;
     top: $tileHeight+$margin+px;
@@ -22,6 +24,7 @@ ul {
     transition: ease-out 0.3s;
 
     &.selector {
+      // @todo import
       background: url('/assets/Abstraction wolves background eyes wolf abstract wallpaper  1920x1080 ....jpg') no-repeat center;
       background-size: cover;
     }
