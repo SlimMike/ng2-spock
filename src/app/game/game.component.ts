@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TurnResult } from '../turn/turn-result';
 
 @Component({
   selector: 'app-game',
@@ -8,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class GameComponent implements OnInit {
 
   constructor() { }
+
+  onTurnEnd(turnResult: TurnResult) {
+    console.log(turnResult);
+  }
 
   ngOnInit() {
   }

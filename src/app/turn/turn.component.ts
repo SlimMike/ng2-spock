@@ -26,7 +26,6 @@ export class TurnComponent implements OnInit {
   endTurn() {
     let result = new TurnResult(this.playerSign, this.npcSign);
 
-    console.log(result);
     this.turnEnd.emit(result);
   }
 
