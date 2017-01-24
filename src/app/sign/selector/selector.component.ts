@@ -11,7 +11,8 @@ export class SelectorComponent implements OnInit {
   @Output() selectedSign: EventEmitter<Sign> = new EventEmitter<Sign>();
 
   public SIGNS = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock'];
-  public selectedMode: boolean = false;
+  private selectedMode: boolean = false;
+  private resultReturned: boolean = false;
 
   constructor() {
   }
@@ -20,8 +21,12 @@ export class SelectorComponent implements OnInit {
   }
 
   selectSign(signName) {
-    let sign = SignFactory.createFromString(signName);
+    if (this.resultReturned) {
+      return;
+    }
 
+    let sign = SignFactory.createFromString(signName);
+    this.resultReturned = true;
     this.selectedSign.emit(sign);
   }
 
