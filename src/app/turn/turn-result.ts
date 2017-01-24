@@ -8,4 +8,16 @@ export class TurnResult {
     this.playerSign = playerSign;
     this.npcSign = npcSign;
   }
+
+  public isWonByPlayer(): boolean {
+    return false;
+  }
+
+  public isWonByNpc(): boolean {
+    return false;
+  }
+
+  public isDraw(): boolean {
+    return !this.isWonByPlayer() && !this.isWonByNpc();
+  }
 }
