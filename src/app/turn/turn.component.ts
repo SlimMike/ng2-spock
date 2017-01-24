@@ -29,6 +29,10 @@ export class TurnComponent implements OnInit {
     this.turnEnd.emit(result);
   }
 
+  public queryForNewTurn() {
+    console.log('ding');
+  }
+
   ngOnInit() {
   }
 }
