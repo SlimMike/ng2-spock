@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Sign } from '../sign';
-import { SignFactory } from '../signFactory';
+import { SignFactory } from '../sign-factory';
 
 @Component({
   selector: 'app-selector',
