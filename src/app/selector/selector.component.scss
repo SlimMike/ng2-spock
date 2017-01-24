@@ -23,13 +23,14 @@ ul {
     left: $tileWidth*3/4+$margin+px;
     transition: ease-out 0.3s;
 
-    &.selectable a {
+    &.selectable span {
       color: #ffffff;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       background: rgba(0, 0, 0, 0.7);
+      pointer-events: none;
     }
 
     &.selector {
