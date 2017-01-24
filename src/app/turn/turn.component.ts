@@ -12,9 +12,10 @@ export class TurnComponent implements OnInit {
   @Output() turnEnd: EventEmitter<TurnResult> = new EventEmitter<TurnResult>();
 
   private playerSign: Sign;
-  private npcSign: Sign = new Spock;
+  private npcSign: Sign;
 
   constructor() {
+    this.npcSign = new Spock;
   }
 
   onPlayerSelectedSign(sign: Sign) {

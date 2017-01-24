@@ -10,9 +10,9 @@ import { SignFactory } from '../sign-factory';
 export class SelectorComponent implements OnInit {
   @Output() selectedSign: EventEmitter<Sign> = new EventEmitter<Sign>();
 
-  public SIGNS = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock'];
+  public signs: string[] = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock'];
   private selectedMode: boolean = false;
-  private resultReturned: boolean = false;
+  private shouldReturn: boolean = true;
 
   constructor() {
   }
@@ -20,14 +20,14 @@ export class SelectorComponent implements OnInit {
   ngOnInit() {
   }
 
-  selectSign(signName) {
-    if (this.resultReturned) {
+  selectSign(signName: string) {
+    if (!this.shouldReturn) {
       return;
     }
 
     let sign = SignFactory.createFromString(signName);
-    this.resultReturned = true;
     this.selectedSign.emit(sign);
+    this.shouldReturn = false;
   }
 
   setSelectMode(mode) {
