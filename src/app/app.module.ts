@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SelectorComponent } from './sign/selector/selector.component';
 import { TurnComponent } from './turn/turn.component';
+import { GameComponent } from './game/game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SelectorComponent,
-    TurnComponent
+    TurnComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,
