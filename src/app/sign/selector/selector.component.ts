@@ -22,6 +22,7 @@ export class SelectorComponent implements OnInit {
 
   public queryForNewSign() {
     console.log('get new!');
+    this.shouldReturn = true;
   }
 
   private selectSign(signName: string) {
@@ -30,8 +31,8 @@ export class SelectorComponent implements OnInit {
     }
 
     let sign = SignFactory.createFromString(signName);
-    this.selectedSign.emit(sign);
     this.shouldReturn = false;
+    this.selectedSign.emit(sign);
   }
 
   private setSelectMode(mode) {
