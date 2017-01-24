@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Sign } from '../sign';
+import { SignFactory } from '../signFactory';
 
 @Component({
   selector: 'app-selector',
@@ -6,7 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['selector.component.scss']
 })
 export class SelectorComponent implements OnInit {
-  @Output() selectedSign: EventEmitter<number> = new EventEmitter<number>();
+  @Output() selectedSign: EventEmitter<Sign> = new EventEmitter<Sign>();
 
   public SIGNS = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock'];
   public selectedMode: boolean = false;
@@ -17,9 +19,10 @@ export class SelectorComponent implements OnInit {
   ngOnInit() {
   }
 
-  selectSign(name: number): void {
-    console.log(name);
-    this.selectedSign.emit(name);
+  selectSign(signName) {
+    let sign = SignFactory.createFromString(signName);
+
+    this.selectedSign.emit(sign);
   }
 
   setSelectMode(mode) {
