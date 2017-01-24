@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Sign } from '../sign';
+import { Spock } from '../spock';
 
 @Component({
   selector: 'app-turn',
@@ -7,15 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TurnComponent implements OnInit {
 
-  private playerSign;
-  private npcSign = 'Spock';
+  private playerSign: Sign;
+  private npcSign: Sign = new Spock;
 
   constructor() {
   }
 
-  onPlayerSelectedSign($event) {
-    console.log($event);
-    this.playerSign = $event;
+  onPlayerSelectedSign(sign: Sign) {
+    this.playerSign = sign;
   }
 
   ngOnInit() {
