@@ -8,10 +8,12 @@ import { TurnResult } from '../turn/turn-result';
 })
 export class GameComponent implements OnInit {
 
+  private turns: TurnResult[] = [];
+
   constructor() { }
 
   onTurnEnd(turnResult: TurnResult) {
-    console.log(turnResult);
+    this.turns.push(turnResult);
   }
 
   ngOnInit() {
