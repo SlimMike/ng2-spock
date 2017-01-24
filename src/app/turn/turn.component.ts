@@ -1,7 +1,8 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewChild } from '@angular/core';
 import { Sign } from '../sign/sign';
 import { Spock } from '../sign/spock';
 import { TurnResult } from './turn-result';
+import { SelectorComponent } from '../sign/selector/selector.component';
 
 @Component({
   selector: 'app-turn',
@@ -9,13 +10,16 @@ import { TurnResult } from './turn-result';
   styleUrls: ['./turn.component.css']
 })
 export class TurnComponent implements OnInit {
-  @Output() turnEnd: EventEmitter<TurnResult> = new EventEmitter<TurnResult>();
-
+  @Output()
+  private turnEnd: EventEmitter<TurnResult>;
+  @ViewChild(SelectorComponent)
+  private selectorComponent: SelectorComponent;
   private playerSign: Sign;
   private npcSign: Sign;
 
   constructor() {
     this.npcSign = new Spock;
+    this.turnEnd = new EventEmitter<TurnResult>()
   }
 
   onPlayerSelectedSign(sign: Sign) {
@@ -31,7 +35,7 @@ export class TurnComponent implements OnInit {
   }
 
   public queryForNewTurn() {
-    console.log('ding');
+    this.selectorComponent.queryForNewSign();
   }
 
   ngOnInit() {

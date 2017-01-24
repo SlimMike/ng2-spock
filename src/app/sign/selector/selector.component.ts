@@ -20,7 +20,11 @@ export class SelectorComponent implements OnInit {
   ngOnInit() {
   }
 
-  selectSign(signName: string) {
+  public queryForNewSign() {
+    console.log('get new!');
+  }
+
+  private selectSign(signName: string) {
     if (!this.shouldReturn) {
       return;
     }
@@ -30,7 +34,7 @@ export class SelectorComponent implements OnInit {
     this.shouldReturn = false;
   }
 
-  setSelectMode(mode) {
+  private setSelectMode(mode) {
     this.selectedMode = mode;
   }
 }
