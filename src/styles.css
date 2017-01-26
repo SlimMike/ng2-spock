@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0;
+}
+
+body::before {
+    content: " ";
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    background: url('/assets/spock-background.jpg') no-repeat top right;
+    background-size: cover;
+    filter: saturate(60%) contrast(40%);
+}
+
+ul {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 0;
+}
+
+h3 {
+    -webkit-margin-before: 0;
+}
