@@ -30,13 +30,8 @@ export class GameComponent implements OnInit {
   }
 
   private livesLost(): number {
-    return this.turns.reduce(function(previousValue, turn: TurnResult): number {
-      var ll = 0;
-      if (turn.isWonByNpc()) {
-        ll = 1;
-      }
-
-      return previousValue + ll;
+    return this.turns.reduce(function(previousValue: number, turn: TurnResult): number {
+      return previousValue + (turn.isWonByNpc() ? 1 : 0);
     }, 0)
   }
 
