@@ -17,7 +17,7 @@ export class GameComponent implements OnInit {
   constructor() {
   }
 
-  onTurnEnd(turnResult: TurnResult) {
+  private onTurnEnd(turnResult: TurnResult): void {
     this.turns.push(turnResult);
 
     if (!this.isGameOver()) {
@@ -35,7 +35,7 @@ export class GameComponent implements OnInit {
     }, 0)
   }
 
-  private queryForNewTurn() {
+  private queryForNewTurn(): void {
     this.turnComponent.queryForNewTurn();
   }
 

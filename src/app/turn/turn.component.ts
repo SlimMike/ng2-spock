@@ -22,19 +22,19 @@ export class TurnComponent implements OnInit {
     this.turnEnd = new EventEmitter<TurnResult>()
   }
 
-  onPlayerSelectedSign(sign: Sign) {
+  private onPlayerSelectedSign(sign: Sign): void {
     this.playerSign = sign;
 
     this.endTurn();
   }
 
-  endTurn() {
+  private endTurn(): void {
     let result = new TurnResult(this.playerSign, this.npcSign);
 
     this.turnEnd.emit(result);
   }
 
-  public queryForNewTurn() {
+  public queryForNewTurn(): void {
     this.selectorComponent.queryForNewSign();
   }
 
