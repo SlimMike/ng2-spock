@@ -10,11 +10,11 @@ export class TurnResult {
   }
 
   public isWonByPlayer(): boolean {
-    return false;
+    return this.playerSign.beats(this.npcSign);
   }
 
   public isWonByNpc(): boolean {
-    return true;
+    return this.npcSign.beats(this.playerSign);
   }
 
   public isDraw(): boolean {
