@@ -11,8 +11,8 @@ export class GameComponent implements OnInit {
 
   @ViewChild(TurnComponent)
   private turnComponent: TurnComponent;
-
   private turns: TurnResult[] = [];
+  private lives: number = 3;
 
   constructor() {
   }
@@ -20,7 +20,24 @@ export class GameComponent implements OnInit {
   onTurnEnd(turnResult: TurnResult) {
     this.turns.push(turnResult);
 
-    this.queryForNewTurn();
+    if (!this.isGameOver()) {
+      this.queryForNewTurn();
+    }
+  }
+
+  private isGameOver(): boolean {
+    return this.livesLost() >= this.lives;
+  }
+
+  private livesLost(): number {
+    return this.turns.reduce(function(previousValue, turn: TurnResult): number {
+      var ll = 0;
+      if (turn.isWonByNpc()) {
+        ll = 1;
+      }
+
+      return previousValue + ll;
+    }, 0)
   }
 
   private queryForNewTurn() {

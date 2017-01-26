@@ -14,7 +14,7 @@ export class TurnResult {
   }
 
   public isWonByNpc(): boolean {
-    return false;
+    return true;
   }
 
   public isDraw(): boolean {
