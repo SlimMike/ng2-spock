@@ -10,9 +10,10 @@ import { SignFactory } from '../sign-factory';
 export class SelectorComponent implements OnInit {
   @Output() selectedSign: EventEmitter<Sign> = new EventEmitter<Sign>();
 
-  public signs: string[] = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock'];
-  private selectedMode: boolean = false;
-  private shouldReturn: boolean = true;
+  public signs: string[]           = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock'];
+  private selectedMode: boolean    = false;
+  private shouldReturn: boolean    = true;
+  private selectedSignName: string = '';
 
   constructor() {
   }
@@ -21,7 +22,8 @@ export class SelectorComponent implements OnInit {
   }
 
   public queryForNewSign(): void {
-    this.shouldReturn = true;
+    this.shouldReturn     = true;
+    this.selectedSignName = '';
   }
 
   private selectSign(signName: string): void {
@@ -29,8 +31,9 @@ export class SelectorComponent implements OnInit {
       return;
     }
 
-    let sign = SignFactory.createFromString(signName);
-    this.shouldReturn = false;
+    let sign              = SignFactory.createFromString(signName);
+    this.selectedSignName = signName;
+    this.shouldReturn     = false;
     this.selectedSign.emit(sign);
   }
 

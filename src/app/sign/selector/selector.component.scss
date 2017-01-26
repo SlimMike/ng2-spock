@@ -40,6 +40,16 @@ ul {
     }
   }
 
+  &.selected {
+    li {
+      filter: grayscale(100%);
+    }
+
+    li.selected {
+      filter: none;
+    }
+  }
+
   &.select {
     li.selectable {
       &:nth-child(1) {
