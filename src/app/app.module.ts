@@ -8,6 +8,7 @@ import { TurnComponent } from './turn/turn.component';
 import { GameComponent } from './game/game.component';
 import { HexSvgComponent } from './hex-svg/hex-svg.component';
 import { PlayerSelectorComponent } from './sign/selector/player-selector/player-selector.component';
+import { NpcSelectorComponent } from './sign/selector/npc-selector/npc-selector.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PlayerSelectorComponent } from './sign/selector/player-selector/player-
     TurnComponent,
     GameComponent,
     HexSvgComponent,
-    PlayerSelectorComponent
+    PlayerSelectorComponent,
+    NpcSelectorComponent
   ],
   imports: [
     BrowserModule,

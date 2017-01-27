@@ -1,0 +1,10 @@
+<ul [ngClass]="{select: selectedMode, selected: selectedSignName}">
+  <li [ngClass]="{selected: sign == selectedSignName, selectable: true}" *ngFor="let sign of signs">
+    <span>{{sign}}</span>
+  </li>
+
+  <li class="selector">
+  </li>
+</ul>
+
+<app-hex-svg></app-hex-svg>
