@@ -2,7 +2,7 @@ import { Component, OnInit, Output, EventEmitter, ViewChild } from '@angular/cor
 import { Sign } from '../sign/sign';
 import { Spock } from '../sign/spock';
 import { TurnResult } from './turn-result';
-import { SelectorComponent } from '../sign/selector/selector.component';
+import { PlayerSelectorComponent } from '../sign/selector/player-selector/player-selector.component';
 
 @Component({
   selector: 'app-turn',
@@ -12,8 +12,8 @@ import { SelectorComponent } from '../sign/selector/selector.component';
 export class TurnComponent implements OnInit {
   @Output()
   private turnEnd: EventEmitter<TurnResult>;
-  @ViewChild(SelectorComponent)
-  private selectorComponent: SelectorComponent;
+  @ViewChild(PlayerSelectorComponent)
+  private playerSelectorComponent: PlayerSelectorComponent;
   private playerSign: Sign;
   private npcSign: Sign;
 
@@ -35,7 +35,7 @@ export class TurnComponent implements OnInit {
   }
 
   public queryForNewTurn(): void {
-    this.selectorComponent.queryForNewSign();
+    this.playerSelectorComponent.queryForNewSign();
   }
 
   ngOnInit() {

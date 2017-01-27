@@ -1,13 +1,13 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Sign } from '../sign';
-import { SignFactory } from '../sign-factory';
+import { Sign } from '../../sign';
+import { SignFactory } from '../../sign-factory';
 
 @Component({
-  selector: 'app-selector',
-  templateUrl: './selector.component.html',
-  styleUrls: ['selector.component.scss']
+  selector: 'app-player-selector',
+  templateUrl: './player-selector.component.html',
+  styleUrls: ['../selector.scss']
 })
-export class SelectorComponent implements OnInit {
+export class PlayerSelectorComponent implements OnInit {
   @Output() selectedSign: EventEmitter<Sign> = new EventEmitter<Sign>();
 
   public signs: string[]           = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock'];

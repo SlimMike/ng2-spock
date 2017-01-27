@@ -4,18 +4,18 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { SelectorComponent } from './sign/selector/selector.component';
 import { TurnComponent } from './turn/turn.component';
 import { GameComponent } from './game/game.component';
 import { HexSvgComponent } from './hex-svg/hex-svg.component';
+import { PlayerSelectorComponent } from './sign/selector/player-selector/player-selector.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SelectorComponent,
     TurnComponent,
     GameComponent,
-    HexSvgComponent
+    HexSvgComponent,
+    PlayerSelectorComponent
   ],
   imports: [
     BrowserModule,
