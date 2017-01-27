@@ -7,7 +7,7 @@ import { SelectorComponent } from '../sign/selector/selector.component';
 @Component({
   selector: 'app-turn',
   templateUrl: './turn.component.html',
-  styleUrls: ['./turn.component.css']
+  styleUrls: ['turn.component.scss']
 })
 export class TurnComponent implements OnInit {
   @Output()
