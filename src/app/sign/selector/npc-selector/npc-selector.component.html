@@ -1,4 +1,4 @@
-<ul [ngClass]="{select: selectedMode, selected: selectedSignName}">
+<ul [ngClass]="{select: selectedMode, selected: true}">
   <li [ngClass]="{selected: sign == selectedSignName, selectable: true}" *ngFor="let sign of signs">
     <span>{{sign}}</span>
   </li>

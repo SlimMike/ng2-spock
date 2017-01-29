@@ -22,6 +22,7 @@ export class PlayerSelectorComponent implements OnInit {
   }
 
   public queryForNewSign(): void {
+    this.selectedMode     = false;
     this.shouldReturn     = true;
     this.selectedSignName = '';
   }
