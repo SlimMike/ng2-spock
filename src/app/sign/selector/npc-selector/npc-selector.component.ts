@@ -11,7 +11,7 @@ export class NpcSelectorComponent implements OnInit {
   @Output() selectedSign: EventEmitter<Sign> = new EventEmitter<Sign>();
 
   public signs: string[]           = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock'];
-  private selectedMode: boolean    = true;
+  private selectedMode: boolean    = false;
   private selectedSignName: string = '';
 
   constructor() {
@@ -22,7 +22,7 @@ export class NpcSelectorComponent implements OnInit {
 
   public queryForNewSign(): void {
     this.selectedSignName = '';
-    console.log('get new npc');
+    this.selectedMode     = true;
     this.getRandomSign();
   }
 
@@ -39,7 +39,9 @@ export class NpcSelectorComponent implements OnInit {
       this.selectedSignName = currentSign;
 
       if (current >= max) {
-        this.selectSign(currentSign);
+        setTimeout(() => {
+          this.selectSign(currentSign);
+        }, 1600);
 
         return 'done';
       }
@@ -49,6 +51,7 @@ export class NpcSelectorComponent implements OnInit {
   }
 
   private selectSign(signName: string): void {
+    this.selectedMode     = false;
     let sign              = SignFactory.createFromString(signName);
     this.selectedSignName = signName;
     this.selectedSign.emit(sign);

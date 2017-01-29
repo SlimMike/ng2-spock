@@ -1,7 +1,4 @@
 <div class="turn">
-  <h3>Player sign: <span *ngIf="playerSign">{{playerSign.constructor.name}}</span></h3>
-  <h3>Npc sign: <span *ngIf="npcSign">{{npcSign.constructor.name}}</span></h3>
-
   <app-player-selector (selectedSign)="onPlayerSelectedSign($event)"></app-player-selector>
   <app-npc-selector (selectedSign)="onNpcSelectedSign($event)"></app-npc-selector>
 </div>
