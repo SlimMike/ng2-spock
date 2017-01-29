@@ -3,5 +3,5 @@
   <h3>Npc sign: <span *ngIf="npcSign">{{npcSign.constructor.name}}</span></h3>
 
   <app-player-selector (selectedSign)="onPlayerSelectedSign($event)"></app-player-selector>
-  <app-npc-selector></app-npc-selector>
+  <app-npc-selector (selectedSign)="onNpcSelectedSign($event)"></app-npc-selector>
 </div>

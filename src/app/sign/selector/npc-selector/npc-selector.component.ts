@@ -12,7 +12,6 @@ export class NpcSelectorComponent implements OnInit {
 
   public signs: string[]           = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock'];
   private selectedMode: boolean    = true;
-  private shouldReturn: boolean    = true;
   private selectedSignName: string = '';
 
   constructor() {
@@ -22,22 +21,41 @@ export class NpcSelectorComponent implements OnInit {
   }
 
   public queryForNewSign(): void {
-    this.shouldReturn     = true;
     this.selectedSignName = '';
+    console.log('get new npc');
+    this.getRandomSign();
+  }
+
+  /**
+   * @todo use promises?
+   */
+  private getRandomSign() {
+    this.selectNextSign(0, this.getRandomNumber(11, 21));
+  }
+
+  private selectNextSign(current, max) {
+    return setTimeout(() => {
+      let currentSign       = this.signs[current % this.signs.length];
+      this.selectedSignName = currentSign;
+
+      if (current >= max) {
+        this.selectSign(currentSign);
+
+        return 'done';
+      }
+
+      return this.selectNextSign(current + 1, max);
+    }, 400);
   }
 
   private selectSign(signName: string): void {
-    if (!this.shouldReturn) {
-      return;
-    }
-
     let sign              = SignFactory.createFromString(signName);
     this.selectedSignName = signName;
-    this.shouldReturn     = false;
     this.selectedSign.emit(sign);
   }
 
-  private setSelectMode(mode): void {
-    this.selectedMode = mode;
+  private getRandomNumber(min: number, max: number): number {
+    let randomMax = max - min;
+    return Math.floor(min + Math.random() * randomMax);
   }
 }

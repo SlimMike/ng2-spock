@@ -21,7 +21,7 @@ export class GameComponent implements OnInit {
     this.turns.push(turnResult);
 
     if (!this.isGameOver()) {
-      this.queryForNewTurn();
+      // this.queryForNewTurn();
     }
   }
 
