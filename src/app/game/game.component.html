@@ -1,8 +1,13 @@
-<ul>
+<ul class="turns">
   <li *ngFor="let turn of turns">
     <h3>Player sign: <span *ngIf="turn.playerSign">{{turn.playerSign.constructor.name}}</span></h3>
     <h3>Npc sign: <span *ngIf="turn.npcSign">{{turn.npcSign.constructor.name}}</span></h3>
   </li>
+</ul>
+
+<ul class="stats">
+  <!-- @todo slightly abused -->
+  <li>Lives: {{lives - livesLost()}}</li>
 </ul>
 
 <app-turn (turnEnd)="onTurnEnd($event)"></app-turn>
