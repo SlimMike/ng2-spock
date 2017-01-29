@@ -13,9 +13,6 @@ ul {
   li {
     width: $tileWidth+px;
     height: $tileHeight+px;
-    // @todo import
-    background: url('/assets/black_and_white_wolf_by_espador-d602yga.png') no-repeat center;
-    background-size: cover;
     // @todo resolve file?
     clip-path: url(#hex-flat);
     position: absolute;
@@ -38,6 +35,31 @@ ul {
       background: url('/assets/Abstraction wolves background eyes wolf abstract wallpaper  1920x1080 ....jpg') no-repeat center;
       background-size: cover;
     }
+
+    &:nth-child(1) {
+      background: url('/assets/FyJpNfo.jpg') no-repeat center;
+      background-size: cover;
+    }
+
+    &:nth-child(2) {
+      background: url('/assets/old_armenian_book_by_deviantik.jpg') no-repeat center;
+      background-size: cover;
+    }
+
+    &:nth-child(3) {
+      background: url('/assets/2ea1c50b3ae97c5797a1629215e09f5b.jpg') no-repeat center;
+      background-size: cover;
+    }
+
+    &:nth-child(4) {
+      background: url('/assets/af31cd1d6fa299061ea277affe2afed9.jpg') no-repeat center;
+      background-size: cover;
+    }
+
+    &:nth-child(5) {
+      background: url('/assets/Spock_performing_Vulcan_salute-e1383761091383-640x460.jpg') no-repeat center;
+      background-size: cover;
+    }
   }
 
   &.selected {
@@ -49,6 +71,8 @@ ul {
       filter: none;
     }
   }
+
+
 
   &.select {
     li.selectable {
