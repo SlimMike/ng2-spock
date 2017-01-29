@@ -1,6 +1,9 @@
 .turn {
   background: blue;
   overflow: hidden;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 
 app-player-selector {
