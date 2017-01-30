@@ -1,5 +1,6 @@
 <div class="game-header">
   <div class="turns">
+    <p>Turns history</p>
     <ul>
       <li *ngFor="let turn of turns | slice:-3">
         <h3>Player sign: <span *ngIf="turn.playerSign">{{turn.playerSign.constructor.name}}</span></h3>
@@ -9,6 +10,7 @@
   </div>
 
   <div class="stats">
+    <p>Statistics</p>
     <ul>
       <!-- @todo slightly abused -->
       <li>Lives: {{lives - livesLost()}}</li>
