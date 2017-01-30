@@ -1,9 +1,19 @@
-.turns {
-  float: left;
-  width: 80%;
-}
+.game-header {
+  padding-top: 40px;
 
-.stats {
-  float: right;
-  width: 20%;
+  .turns ul, .stats ul {
+    list-style: none;
+  }
+
+  .turns {
+    float: left;
+    width: 80%;
+    font-size: 16px;
+  }
+
+  .stats {
+    float: right;
+    width: 20%;
+    font-size: 24px;
+  }
 }
