@@ -13,8 +13,16 @@ export class TurnResult {
     return this.playerSign.beats(this.npcSign);
   }
 
+  public isWonByPlayerMessage(): string {
+    return this.playerSign.beatsMessage(this.npcSign);
+  }
+
   public isWonByNpc(): boolean {
     return this.npcSign.beats(this.playerSign);
+  }
+
+  public isWonByNpcMessage(): string {
+    return this.npcSign.beatsMessage(this.playerSign);
   }
 
   public isDraw(): boolean {

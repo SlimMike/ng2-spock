@@ -12,3 +12,14 @@ app-player-selector {
 app-npc-selector {
   float: right;
 }
+
+.turn-result {
+  width: 100%;
+  margin-bottom: 100px;
+
+  p {
+    font-size: 60px;
+    color: #ffffff;
+    text-align: center;
+  }
+}

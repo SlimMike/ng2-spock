@@ -1,4 +1,15 @@
 <div class="turn">
+  <div *ngIf="turnResult" class="turn-result">
+    <p *ngIf="turnResult.isWonByPlayer()">
+      {{turnResult.isWonByPlayerMessage()}}
+    </p>
+    <p *ngIf="turnResult.isWonByNpc()">
+      {{turnResult.isWonByNpcMessage()}}
+    </p>
+    <p *ngIf="turnResult.isDraw()">
+      Draw round
+    </p>
+  </div>
   <app-player-selector (selectedSign)="onPlayerSelectedSign($event)"></app-player-selector>
   <app-npc-selector (selectedSign)="onNpcSelectedSign($event)"></app-npc-selector>
 </div>

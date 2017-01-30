@@ -18,6 +18,7 @@ export class TurnComponent implements OnInit {
   private npcSelectorComponent: NpcSelectorComponent;
   private playerSign: Sign;
   private npcSign: Sign;
+  private turnResult: TurnResult;
 
   constructor() {
     this.turnEnd = new EventEmitter<TurnResult>();
@@ -40,12 +41,16 @@ export class TurnComponent implements OnInit {
   }
 
   private endTurn(): void {
-    let result = new TurnResult(this.playerSign, this.npcSign);
+    let result      = new TurnResult(this.playerSign, this.npcSign);
+    this.turnResult = result;
 
-    this.turnEnd.emit(result);
+    setTimeout(() => {
+      this.turnEnd.emit(result);
+    }, 3000);
   }
 
   public queryForNewTurn(): void {
+    this.turnResult = null;
     this.playerSelectorComponent.queryForNewSign();
   }
 
