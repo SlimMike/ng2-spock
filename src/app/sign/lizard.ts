@@ -4,7 +4,7 @@ import { Paper } from './paper';
 
 export class Lizard extends Sign {
   protected beatsSigns = {
-    [Spock.name]: '',
-    [Paper.name]: ''
+    [Spock.name]: 'Lizard poisons spock',
+    [Paper.name]: 'Lizard eats paper'
   };
 }

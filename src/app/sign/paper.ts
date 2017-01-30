@@ -4,7 +4,7 @@ import { Spock } from './spock';
 
 export class Paper extends Sign {
   protected beatsSigns = {
-    [Spock.name]: '',
-    [Rock.name]: ''
+    [Spock.name]: 'Paper disproves spock',
+    [Rock.name]: 'Paper covers rock'
   };
 }
