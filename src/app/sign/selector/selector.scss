@@ -6,7 +6,6 @@ $thirdRowVOffset: 156 + $margin*3/2;
 
 ul {
   position: relative;
-  background: black;
   width: 310px;
   height: $tileHeight*3+$margin*2px;
 
@@ -40,7 +39,7 @@ ul {
 
     &.selector {
       // @todo import
-      background: url('/assets/Abstraction wolves background eyes wolf abstract wallpaper  1920x1080 ....jpg') no-repeat center;
+      background: url('/assets/Backgrounds_The_sign_of_the_anime_Fullmetal_Alchemist_102263_.jpg') no-repeat center;
       background-size: cover;
     }
 
