@@ -1,2 +1,0 @@
-body,html{min-height:800px;height:100%}body{margin:0;background:#4e4f50}body:before{content:" ";position:fixed;min-width:100%;min-height:100%;background:url("/assets/spock-background.jpg") no-repeat 100% 0;background-size:cover;z-index:-1;-webkit-filter:saturate(60%) contrast(40%);filter:saturate(60%) contrast(40%)}ul{-webkit-margin-after:0;-webkit-padding-start:0}h3,ul{-webkit-margin-before:0}
-/*# sourceMappingURL=styles.bundle.map*/
