@@ -20,14 +20,22 @@ ul {
     left: $tileWidth*3/4+$margin+px;
     transition: ease-out 0.3s;
 
-    &.selectable span {
-      color: #ffffff;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(0, 0, 0, 0.7);
-      pointer-events: none;
+    &.selectable {
+      span {
+        color: #ffffff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.7);
+        pointer-events: none;
+        font-size: 24px;
+        display: none;
+      }
+
+      &:hover span {
+        display: block;
+      }
     }
 
     &.selector {
@@ -71,8 +79,6 @@ ul {
       filter: none;
     }
   }
-
-
 
   &.select {
     li.selectable {
