@@ -3,5 +3,8 @@ import { Paper } from './paper';
 import { Lizard } from './lizard';
 
 export class Scissors extends Sign {
-  protected beatsSigns = [Paper.name, Lizard.name];
+  protected beatsSigns = {
+    [Paper.name]: '',
+    [Lizard.name]: ''
+  };
 }

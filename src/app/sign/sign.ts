@@ -1,7 +1,7 @@
 export abstract class Sign {
-  protected abstract beatsSigns: string[];
+  protected abstract beatsSigns: {[x: string]: string};
 
   public beats(other: Sign): boolean {
-    return this.beatsSigns.indexOf(other.constructor.name) != -1;
+    return this.beatsSigns.hasOwnProperty(other.constructor.name);
   }
 }

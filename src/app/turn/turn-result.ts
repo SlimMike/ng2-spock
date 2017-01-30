@@ -6,7 +6,7 @@ export class TurnResult {
 
   constructor(playerSign: Sign, npcSign: Sign) {
     this.playerSign = playerSign;
-    this.npcSign = npcSign;
+    this.npcSign    = npcSign;
   }
 
   public isWonByPlayer(): boolean {
